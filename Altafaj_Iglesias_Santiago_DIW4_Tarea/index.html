@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+</body>
+</html>
+    <body>
+        <div id="contenedor">
+        <fieldset>
+            <legend>DIW Tarea4</legend>
+            <form name="formulario" id="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$">
+                <label for="contrasena">contrasena:</label>
+                <input type="password" id="contrasena" name="contrasena" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$">
+                <!--
+                Esta expresión regular utiliza lookaheads para verificar que la cadena contenga al menos una letra minúscula,
+                 al menos una letra mayúscula y al menos un número. La expresión regular también verifica que la cadena tenga
+                 al menos un carácter.
+                Aquí hay una explicación de la expresión regular:
+                    ^ - Coincide con el inicio de la cadena.
+                    (?=.*[a-z]) - Verifica que la cadena contenga al menos una letra minúscula.
+                    (?=.*[A-Z]) - Verifica que la cadena contenga al menos una letra mayúscula.
+                    (?=.*\d) - Verifica que la cadena contenga al menos un número.
+                    .+ - Coincide con cualquier carácter uno o más veces.
+                    $ - Coincide con el final de la cadena.
+                -->
+                <label for="fecha">Fecha Nacimiento:</label>
+                <input type="date" name="fecha" id="fecha" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" pattern="9[0-9]{8}" required id="telefono" maxlength="9" />
+                <!--
+                Esta expresión regular verifica que el número de teléfono comience con un 9 y tenga 8 dígitos adicionales
+                -->
+                <label for="opciones">Situación actual</label>
+                <select name="opciones" id="opciones">
+                    <option value="opcion1">Casado</option>
+                    <option value="opcion2" selected>Soltero</option>
+                    <option value="opcion3">Jubilado</option>
+                  </select>
+                <input type="reset" name="limpiar" id="button" value="Limpiar" />
+                <input type="submit" name="enviar" id="enviar" value="Enviar" />
+            </form>
+        </fieldset>
+    </div>
+    </body>
+
+</html>
